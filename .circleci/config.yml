@@ -5,4 +5,5 @@
   env:
     CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
-
+orbs:
+ codecov/codecov@3.2.4
