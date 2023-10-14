@@ -1,14 +1,37 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-#
-# See https://github.com/r-lib/actions/tree/master/examples#readme for
-# additional example workflows available for the R community.
-
 name: Upload coverage reports to Codecov
-  uses: codecov/codecov@3.3.0
-  env:
-    CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
-  
+on:
+  push:
+    branches:
+      - main  # Replace 'main' with your branch name
+
+jobs:
+  upload-coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up R
+      uses: r-lib/actions/setup-r@v1
+
+    - name: Install dependencies
+      run: |
+        R -e 'install.packages(c("covr", "testthat"))'
+        R -e 'devtools::install_deps(dependencies = TRUE)'
+
+    - name: Run tests and coverage
+      run: |
+        R CMD build .
+        R CMD check *tar.gz
+        R -e 'covr::package_coverage()'
+      env:
+        GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Upload coverage report to Codecov
+      uses: codecov/codecov-action@v2
+      with:
+        flags: '*covr*'
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
