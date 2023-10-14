@@ -1,10 +1,3 @@
-
-
-- name: Upload coverage reports to Codecov
-  uses: codecov/codecov-action@v3
-  env:
-    CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-
 # testdatazoomamazonia
 
 <!-- badges: start -->
@@ -12,22 +5,25 @@
 
 
 
-The goal of testdatazoomamazonia is to ...
+The goal of testdatazoomamazonia is to run automatized tests to check if the functions do not present any error.
 
 ## Installation
 
 You can install the development version of testdatazoomamazonia like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+devtools::install_github("carolinamoura2000/essai-DTZ-tests-")
+devtools::load_all(".")
+
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to run tests: 
 
 ``` r
 library(testdatazoomamazonia)
 ## basic example code
+devtools::test()
 ```
 
