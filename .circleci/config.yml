@@ -1,4 +1,16 @@
 orbs:
- codecov/codecov@3.2.4
+  codecov: codecov/codecov@3.2.4
 
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.8
+
+    steps:
+      - checkout
+
+      # Add your build and test steps here
+
+      - codecov/upload:
+          token: $CODECOV_TOKEN
 
