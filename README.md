@@ -4,8 +4,6 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-[![Codecov test
-coverage](https://codecov.io/gh/r-lib/usethis/branch/main/graph/badge.svg)](https://app.codecov.io/gh/r-lib/usethis?branch=main)
 
 
 The goal of testdatazoomamazonia is to ...
