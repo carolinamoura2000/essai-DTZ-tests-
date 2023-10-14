@@ -7,7 +7,7 @@
 # additional example workflows available for the R community.
 
 name: Upload coverage reports to Codecov
-  uses: codecov/codecov-action@v3
+  uses: codecov/codecov@3.3.0
   env:
     CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
