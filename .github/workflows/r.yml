@@ -23,8 +23,13 @@ jobs:
         R -e 'install.packages(c("covr", "testthat"))'
         R -e 'devtools::install_deps(dependencies = TRUE)'
 
-    # The rest of your workflow steps
-    # ...
+   - name: Run tests and coverage
+      run: |
+        R CMD build .
+        R CMD check *tar.gz
+        R -e 'covr::package_coverage()'
+      env:
+        GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Upload coverage report to Codecov
       uses: codecov/codecov-action@v3
