@@ -5,7 +5,12 @@
 #
 # See https://github.com/r-lib/actions/tree/master/examples#readme for
 # additional example workflows available for the R community.
+- name: Upload coverage reports to Codecov
+  uses: codecov/codecov-action@v3
+  env:
+    CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
+    
 name: R
 
 on:
