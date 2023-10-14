@@ -23,7 +23,7 @@ jobs:
         R -e 'install.packages(c("covr", "testthat"))'
         R -e 'devtools::install_deps(dependencies = TRUE)'
 
-   - name: Run tests and coverage
+    - name: Run tests and coverage
       run: |
         R CMD build .
         R CMD check *tar.gz
