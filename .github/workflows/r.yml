@@ -1,5 +1,7 @@
 # Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
 # Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
+
+
 on:
   push:
     branches: [main, master]
@@ -10,29 +12,18 @@ name: test-coverage
 
 jobs:
 
-  test-coverage:
+  build:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: r-lib/actions/setup-r@v2
-        with:
-          use-public-rspm: true
-  
-      - uses: r-lib/actions/setup-r-dependencies@v2
-        with:
-          extra-packages: any::covr
-          needs: coverage
-      - uses: actions/checkout@master
-      - uses: codecov/codecov-action@v3
+      - name: Debug Information
+        run: |
+          echo "GitHub Event: $GITHUB_EVENT_NAME"
+          echo "GitHub Repository: $GITHUB_REPOSITORY"
+          echo "GitHub Workflow: $GITHUB_WORKFLOW"
+          # Add more debugging information if needed
+          
+      - name: Upload Code Coverage
+        uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          flags: unittests # optional
-          name: codecov-umbrella # optional
-          fail_ci_if_error: true # optional (default = false)
-          verbose: true # optional (default = false)
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
