@@ -2,6 +2,7 @@
 # testdatazoomamazonia
 
 <!-- badges: start -->
+[![Codecov test coverage](https://codecov.io/gh/carolinamoura2000/essai-DTZ-tests-/branch/main/graph/badge.svg)](https://app.codecov.io/gh/carolinamoura2000/essai-DTZ-tests-?branch=main)
 <!-- badges: end -->
 
 The goal of testdatazoomamazonia is to ...
