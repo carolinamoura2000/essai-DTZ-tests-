@@ -2,6 +2,8 @@
 # testdatazoomamazonia
 
 <!-- badges: start -->
+[![alt_text](http://path/to/the/badge/image)](http://path/to/more/details)
+
 <!-- badges: end -->
 
 The goal of testdatazoomamazonia is to ...
