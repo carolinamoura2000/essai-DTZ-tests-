@@ -14,14 +14,7 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    steps:
-      - name: Debug Information
-        run: |
-          echo "GitHub Event: $GITHUB_EVENT_NAME"
-          echo "GitHub Repository: $GITHUB_REPOSITORY"
-          echo "GitHub Workflow: $GITHUB_WORKFLOW"
-          # Add more debugging information if needed
-          
+    steps:    
       - name: Upload Code Coverage
         uses: codecov/codecov-action@v3
         with:
