@@ -17,4 +17,4 @@ jobs:
      - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v3
       env:
-        CODECOV_TOKEN=e3e38319-ab5e-4856-9270-80300512622d
+        CODECOV_TOKEN=2824451f-ed10-45c3-8862-6e06e75b16e2
