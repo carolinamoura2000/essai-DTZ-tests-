@@ -8,7 +8,10 @@
 
 library(testthat)
 library(testdatazoomamazonia)
-test_dir("https://github.com/carolinamoura2000/essai-DTZ-tests-/tests/testthat", reporter=c("minimal", "location"))
+library(dplyr)
+library(arrow)
+
+data_release <- 'v0.2.0'
 
 test_check("testdatazoomamazonia")
 
