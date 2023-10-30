@@ -8,5 +8,7 @@
 
 library(testthat)
 library(testdatazoomamazonia)
+test_dir("C:/Users/carol/iCloudDrive/PUC/DATAZOOM/essai-DTZ-tests-/tests/testthat", reporter=c("minimal", "location"))
 
 test_check("testdatazoomamazonia")
+
