@@ -28,6 +28,7 @@ library(testdatazoomamazonia)
 
 test_dir("C:/Users/carol/iCloudDrive/PUC/DATAZOOM/essai-DTZ-tests-/tests/testthat", reporter=c("minimal", "location"))
 
-## If you want to run all the tests of a package, you just need to press Ctrl/Cmd + Shift + T (from within RStudio), or run devtools::test() from the R console.
+# If you want to run all the tests of a package, you just need to press Ctrl/Cmd + Shift + T (from within RStudio), or run devtools::test() from the R console.
 ```
+install.packages("datazoom.amazonia")
 

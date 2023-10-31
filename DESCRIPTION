@@ -12,12 +12,11 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 Depends: 
     R (>= 4.0)
-LinkingTo: 
-    Rcpp
 VignetteBuilder: 
     knitr
 LazyData: true
 Imports:
+    withr,
     data.table,
     dplyr,
     Hmisc,
