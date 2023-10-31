@@ -14,7 +14,7 @@ coverage:
         informational: true
 
 jobs: 
-     - name: Upload coverage reports to Codecov
-      uses: codecov/codecov-action@v3
-      env:
-        CODECOV_TOKEN=2824451f-ed10-45c3-8862-6e06e75b16e2
+  - name: Upload coverage reports to Codecov
+    uses: codecov/codecov-action@v3
+    with:
+      token: ${{ secrets.CODECOV_TOKEN }}
