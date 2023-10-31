@@ -13,6 +13,12 @@ load_prodes(
 }
 \arguments{
 \item{dataset}{A dataset name ("prodes").}
+
+\item{raw_data}{A \code{boolean} setting the return of raw (\code{TRUE}) or processed (\code{FALSE}) data.}
+
+\item{time_period}{A \code{numeric} indicating for which years the data will be loaded, in the format YYYY. Can be any vector of numbers, such as 2010:2012.}
+
+\item{language}{A \code{string} that indicates in which language the data will be returned. Portuguese ("pt") and English ("eng") are supported.}
 }
 \value{
 A \code{tibble} with the selected data.

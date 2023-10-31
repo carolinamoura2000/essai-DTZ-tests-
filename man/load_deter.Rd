@@ -8,6 +8,10 @@ load_deter(dataset, raw_data = FALSE, language = "eng")
 }
 \arguments{
 \item{dataset}{A dataset name ("deter_amz", "deter_cerrado") with information about both Amazon and Cerrado}
+
+\item{raw_data}{A \code{boolean} setting the return of raw (\code{TRUE}) or processed (\code{FALSE}) data.}
+
+\item{language}{A \code{string} that indicates in which language the data will be returned. Portuguese ("pt") and English ("eng") are supported.}
 }
 \value{
 A \code{tibble} (if \code{raw_data} = \code{TRUE}) or a \code{sf} object (if \code{raw_data} = \code{FALSE}).
