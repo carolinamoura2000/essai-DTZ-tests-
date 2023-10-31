@@ -9,7 +9,6 @@
 library(testthat)
 library(testdatazoomamazonia)
 
-data_release <- 'v0.2.0'
 
 test_check("testdatazoomamazonia")
 
